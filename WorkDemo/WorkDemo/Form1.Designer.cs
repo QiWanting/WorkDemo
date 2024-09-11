@@ -31,6 +31,7 @@
             this.button_write_yaml = new System.Windows.Forms.Button();
             this.button_read_yaml = new System.Windows.Forms.Button();
             this.textBox_display = new System.Windows.Forms.TextBox();
+            this.button_yaml_to_json = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_write_yaml
@@ -62,11 +63,22 @@
             this.textBox_display.Size = new System.Drawing.Size(310, 426);
             this.textBox_display.TabIndex = 2;
             // 
+            // button_yaml_to_json
+            // 
+            this.button_yaml_to_json.Location = new System.Drawing.Point(347, 70);
+            this.button_yaml_to_json.Name = "button_yaml_to_json";
+            this.button_yaml_to_json.Size = new System.Drawing.Size(156, 23);
+            this.button_yaml_to_json.TabIndex = 3;
+            this.button_yaml_to_json.Text = "Yaml_To_Json";
+            this.button_yaml_to_json.UseVisualStyleBackColor = true;
+            this.button_yaml_to_json.Click += new System.EventHandler(this.button_yaml_to_json_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(522, 450);
+            this.Controls.Add(this.button_yaml_to_json);
             this.Controls.Add(this.textBox_display);
             this.Controls.Add(this.button_read_yaml);
             this.Controls.Add(this.button_write_yaml);
@@ -82,6 +94,7 @@
         private System.Windows.Forms.Button button_write_yaml;
         private System.Windows.Forms.Button button_read_yaml;
         private System.Windows.Forms.TextBox textBox_display;
+        private System.Windows.Forms.Button button_yaml_to_json;
     }
 }
 
