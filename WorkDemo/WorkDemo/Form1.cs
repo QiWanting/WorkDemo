@@ -21,13 +21,31 @@ namespace WorkDemo
         private void button_write_yaml_Click(object sender, EventArgs e)
         {
             var test = new YamlClass();
-            test.arraytest = new string[] { "ABC1", "BCD", "123" };
-            test.stringtest = "这是测试";
-            test.inttest = 5;
-            test.dictionarytest = new Dictionary<string, string>();
-            test.dictionarytest.Add("KEY1", "VAL1");
-            test.dictionarytest.Add("KEY2", "VAL2");
-            test.dictionarytest.Add("KEY3", "VAL3");
+            test.yamlClass = new List<YamlClass.YamlClassCell> { };
+            var newCell = new YamlClass.YamlClassCell
+            {
+                arraytest = new string[] { "ABC1", "BCD", "123" },
+                stringtest = "这是测试",
+                inttest = 5,
+                dictionarytest = new Dictionary<string, string> {
+                    { "KEY1", "VAL1"},
+                    {"KEY2", "VAL2" },
+                    {"KEY3", "VAL3" }
+                },
+            };
+            test.yamlClass.Add(newCell);
+            newCell = new YamlClass.YamlClassCell
+            {
+                arraytest = new string[] { "A", "B", "123" },
+                stringtest = "这是测试2",
+                inttest = 5,
+                dictionarytest = new Dictionary<string, string> {
+                    { "KEY1", "VAL1"},
+                    {"KEY2", "VAL2" },
+                    {"KEY3", "VAL3" }
+                },
+            };
+            test.yamlClass.Add(newCell);
             YamlHelper.WriteToYaml<YamlClass>("test.yaml", test);
         }
 
@@ -35,10 +53,10 @@ namespace WorkDemo
         {
             var test = YamlHelper.ReadYaml<YamlClass>("test.yaml");
             yamlData = test;
-            logHelper.Info(String.Join(",", test.arraytest));
-            logHelper.Info(test.stringtest.ToString());
-            logHelper.Info(test.inttest.ToString());
-            logHelper.Info(test.dictionarytest.Count.ToString());
+            logHelper.Info(String.Join(",", test.yamlClass[0].arraytest));
+            logHelper.Info(test.yamlClass[0].stringtest.ToString());
+            logHelper.Info(test.yamlClass[0].inttest.ToString());
+            logHelper.Info(test.yamlClass[0].dictionarytest.Count.ToString());
         }
 
         private void button_yaml_to_json_Click(object sender, EventArgs e)
@@ -58,7 +76,7 @@ namespace WorkDemo
                 // 解析 JSON 字符串
                 var jsonData = JsonConvert.DeserializeObject<YamlClass>(stringWriter.ToString());
                 // 获取某一个关键字的值
-                Console.WriteLine(jsonData.stringtest);
+                //Console.WriteLine(jsonData.stringtest);
             }
         }
     }
