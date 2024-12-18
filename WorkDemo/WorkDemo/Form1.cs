@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using HalconDotNet;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -78,6 +79,95 @@ namespace WorkDemo
                 // 获取某一个关键字的值
                 //Console.WriteLine(jsonData.stringtest);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string originalFile = @"D:\own\2024\4G\Code\DTE_ImageProcessing\test\testData\CalibrateFiducail\数据正常,标定成功"; // 原本路径
+            string newFile = @"D:\own\2024\4G\Code\DTE_ImageProcessing\test\testData\CalibrateFiducail\数据正常,标定成功\1"; // 更改名字后的路径
+
+            try
+            {
+                // 获取指定文件夹中的所有文件
+                string[] files = Directory.GetFiles(originalFile);
+
+                int pictureIndex = 1;
+                // 遍历文件数组并重命名每个文件
+                foreach (string file in files)
+                {
+                    // 获取文件的原始名称（不含扩展名）和扩展名
+                    string fileName = Path.GetFileNameWithoutExtension(file);
+                    string extension = Path.GetExtension(file);
+
+                    // 构建新的文件名
+                    string newFileName = pictureIndex + extension;
+
+                    // 构建新的文件路径
+                    string newFilePath = Path.Combine(newFile, newFileName);
+
+                    // 重命名文件
+                    File.Move(file, newFilePath);
+                    Console.WriteLine($"Renamed '{file}' to '{newFilePath}'");
+                    pictureIndex++;
+                }
+            }
+            catch (Exception ex)
+            {
+                // 处理可能发生的异常，如路径不存在、没有权限等
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Local iconic variables 
+
+            HObject ho_image;
+            // Initialize local and output iconic variables 
+            HOperatorSet.GenEmptyObj(out ho_image);
+            ho_image.Dispose();
+            HOperatorSet.ReadImage(out ho_image, "C://Users//qiwa//Desktop//111.png");
+            ho_image.Dispose();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // 指定要读取的文件夹路径
+            string folderPath = @"D:\own\2024\4G\Code\DTE_ImageProcessing\test\testData\Matching\字母"; // 请替换为实际的文件夹路径
+
+            try
+            {
+                // 读取文件夹及其所有子文件夹中的文件路径
+                string[] filePaths = Directory.GetFiles(folderPath, "*.*", SearchOption.AllDirectories);
+
+                // 输出文件路径
+                foreach (string filePath in filePaths)
+                {
+                    Console.WriteLine(filePath);
+                }
+            }
+            catch (Exception ex)
+            {
+                // 处理任何异常，例如文件夹不存在或没有访问权限等
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// 计算图片平均灰度
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button4_Click(object sender, EventArgs e)
+        {
+            HObject image = new HObject();
+            HObject region = new HObject();
+            HTuple mean = new HTuple();
+            HTuple deviation = new HTuple();
+
+            HOperatorSet.ReadImage(out image, @"");//图片路径另外添加
+            HOperatorSet.Threshold(image, out region, 1, 255);
+            HOperatorSet.Intensity(region, image, out mean, out deviation);
         }
     }
 }

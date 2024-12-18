@@ -26,3 +26,9 @@ D:\own\2024\4G\Code\WorkDemo\WorkDemo\WorkDemo\bin\Debug\YamlDotNet.xml
 D:\own\2024\4G\Code\WorkDemo\WorkDemo\WorkDemo\obj\Debug\WorkDemo.csproj.Up2Date
 D:\own\2024\4G\Code\WorkDemo\WorkDemo\WorkDemo\bin\Debug\Newtonsoft.Json.dll
 D:\own\2024\4G\Code\WorkDemo\WorkDemo\WorkDemo\bin\Debug\Newtonsoft.Json.xml
+D:\own\2024\4G\Code\WorkDemo\WorkDemo\WorkDemo\bin\Debug\HCSharpInterface.dll
+D:\own\2024\4G\Code\WorkDemo\WorkDemo\WorkDemo\bin\Debug\halcondotnet.xml
+D:\own\2024\4G\Code\WorkDemo\WorkDemo\WorkDemo\bin\Debug\HCSharpInterface.pdb
+D:\own\2024\4G\Code\WorkDemo\WorkDemo\WorkDemo\bin\Debug\hdevenginedotnet.xml
+D:\own\2024\4G\Code\WorkDemo\WorkDemo\WorkDemo\bin\Debug\halcondotnet.dll
+D:\own\2024\4G\Code\WorkDemo\WorkDemo\WorkDemo\bin\Debug\hdevenginedotnet.dll

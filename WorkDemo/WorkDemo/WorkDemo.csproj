@@ -33,6 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="halcondotnet, Version=22.11.3.0, Culture=neutral, PublicKeyToken=4973bed59ddbf2b8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="HCSharpInterface">
+      <HintPath>..\..\..\DTE_ImageProcessing\src\HCSharpInterface\bin\Release\netstandard2.0\HCSharpInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="hdevenginedotnet, Version=22.11.3.0, Culture=neutral, PublicKeyToken=4973bed59ddbf2b8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\qiwa\AppData\Local\Programs\MVTec\HALCON-22.11-Steady\bin\dotnet35\hdevenginedotnet.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
