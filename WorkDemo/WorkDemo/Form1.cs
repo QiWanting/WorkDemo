@@ -1,7 +1,11 @@
 ﻿using HalconDotNet;
+using HCSharpInterface.imageProcess;
+using HCSharpInterface.matching;
+using HCSharpInterface.Model;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using WorkDemo.tools;
@@ -165,9 +169,48 @@ namespace WorkDemo
             HTuple mean = new HTuple();
             HTuple deviation = new HTuple();
 
-            HOperatorSet.ReadImage(out image, @"");//图片路径另外添加
+            HOperatorSet.ReadImage(out image, @"C:\Users\qiwa\Pictures\Saved Pictures\th.jpg");//图片路径另外添加
             HOperatorSet.Threshold(image, out region, 1, 255);
             HOperatorSet.Intensity(region, image, out mean, out deviation);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ShapeModel shapeModel = new ShapeModel();
+            HObject hObject = new HObject();
+            HImage image = new HImage();
+            Matching matching = new Matching();
+            List<ShapeModel> shapeModelList = new List<ShapeModel>();
+
+            HOperatorSet.ReadImage(out hObject, @"C:\Users\qiwa\Desktop\pictures\pictures\pictures\Z.bmp");
+            image = new HImage(hObject);
+            shapeModel = new ShapeModel(image,
+                new RoiRect(1566.35000000f, 2235.15000000f, 1906.58000000f, 2630.78000000f),
+                0, 360, 0.35f, 5, new PointF((1566.35000000f + 1906.58000000f) / 2, (2235.15000000f + 2630.78000000f) / 2));
+            shapeModel.CreateShapeModel();
+            shapeModelList.Add(shapeModel);
+            matching = new Matching(shapeModelList);
+
+            HOperatorSet.ReadImage(out hObject, @"C:\Users\qiwa\Desktop\pictures\pictures\pictures\Z_1.bmp");
+            image = new HImage(hObject);
+            (ReturnCode returnCode, List<List<double[]>> transMarixResult) result = matching.FindShapeModels(image);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var result = ImageProcess.ReadImage(@"");
+            }
+            catch (Exception ex)
+            {
+                string t = ex.Message.ToString() + ex.StackTrace.ToString();
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
