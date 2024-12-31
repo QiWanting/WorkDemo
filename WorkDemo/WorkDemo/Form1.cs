@@ -232,7 +232,10 @@ namespace WorkDemo
 
             HOperatorSet.ReadImage(out hObject, @"C:\Users\qiwa\Desktop\pictures\pictures\pictures\Z_1.bmp");
             image = new HImage(hObject);
-            (ReturnCode returnCode, List<List<double[]>> transMarixResult) result = matching.FindShapeModels(image);
+            //(ReturnCode returnCode, List<List<double[]>> transMarixResult) result = matching.FindShapeModels(image);
+
+
+            (ReturnCode returnCode, List<List<double[]>> transMarixResult) result1 = matching.FindShapeModels(new HImage());
         }
 
         /// <summary>

@@ -43,9 +43,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button_open_image = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -76,7 +76,7 @@
             this.textBox_display.Location = new System.Drawing.Point(12, 779);
             this.textBox_display.Multiline = true;
             this.textBox_display.Name = "textBox_display";
-            this.textBox_display.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.textBox_display.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox_display.Size = new System.Drawing.Size(1134, 198);
             this.textBox_display.TabIndex = 2;
             // 
@@ -215,15 +215,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "文件操作";
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 12);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
-            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 172);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 12);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "label1";
+            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label3_MouseMove);
             // 
             // label2
             // 
@@ -235,15 +235,15 @@
             this.label2.Text = "label1";
             this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label2_MouseMove);
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 12);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "label1";
-            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label3_MouseMove);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 12);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "label1";
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
             // Form1
             // 
