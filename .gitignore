@@ -42,3 +42,5 @@
 /WorkDemo/BatchInspectionCSharp/obj
 /WorkDemo/BatchInspectionCSharp/bin
 /WorkDemo/CPUMonitor/.vs
+*.dll
+/WorkDemo/WorkDemo/bin/Debug/WorkDemo.exe.config

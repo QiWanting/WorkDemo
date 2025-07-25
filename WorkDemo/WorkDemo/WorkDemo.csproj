@@ -33,17 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="halcondotnet, Version=22.11.3.0, Culture=neutral, PublicKeyToken=4973bed59ddbf2b8, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\MVTec\HALCON-24.11-Progress-Steady\bin\dotnet20\halcondotnet.dll</HintPath>
-    </Reference>
-    <Reference Include="HCSharpInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\DTE_ImageProcessing\src\HCSharpInterface\bin\Release\netstandard2.0\HCSharpInterface.dll</HintPath>
-    </Reference>
     <Reference Include="hdevenginedotnet, Version=22.11.3.0, Culture=neutral, PublicKeyToken=4973bed59ddbf2b8, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\MVTec\HALCON-24.11-Progress-Steady\bin\dotnet20\hdevenginedotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="LMStringConvertLib">
+      <HintPath>..\packages\LMStringConvertLib.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
