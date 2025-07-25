@@ -38,3 +38,7 @@
 /WorkDemo/WorkDemo/obj/Debug/WorkDemo.pdb
 /WorkDemo/WorkDemo/bin/Release
 /WorkDemo/.vs/WorkDemo/v17/.suo
+/WorkDemo/.vs
+/WorkDemo/BatchInspectionCSharp/obj
+/WorkDemo/BatchInspectionCSharp/bin
+/WorkDemo/CPUMonitor/.vs
