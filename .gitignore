@@ -65,3 +65,5 @@
 /WorkDemo/packages/YamlDotNet.16.1.0/README.md
 /WorkDemo/CPUMonitor/bin/Debug
 /WorkDemo/CPUMonitor/obj/Debug
+/.vs/slnx.sqlite
+/WorkDemo/CPUMonitor/obj/Release
