@@ -44,3 +44,7 @@
 /WorkDemo/CPUMonitor/.vs
 *.dll
 /WorkDemo/WorkDemo/bin/Debug/WorkDemo.exe.config
+/WorkDemo/TaskDemo/bin/Debug/net8.0-windows
+/WorkDemo/TaskDemo/obj/Debug/net8.0-windows
+/WorkDemo/TaskDemo/obj/Release/net8.0-windows
+/WorkDemo/TaskDemo/obj
